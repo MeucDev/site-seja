@@ -1,18 +1,39 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <Carousel />
+    <div class="container">
+      <p class="p-5">Who we are</p>
+      <Feature />
+      <Feature />
+      <Feature />
+    </div>
+    <div class="socials">
+
+    </div>
+    <Bottom />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import Carousel from '@/components/Carousel.vue'
+import Feature from '@/components/Feature.vue'
+import Bottom from '@/components/Bottom.vue'
 
 @Options({
   components: {
-    HelloWorld
+    Carousel,
+    Feature,
+    Bottom
   }
 })
 export default class Home extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+.home {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+</style>
