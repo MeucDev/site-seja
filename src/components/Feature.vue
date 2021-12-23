@@ -1,7 +1,7 @@
 <template>
   <div class="row feature py-5">
     <div class="col d-flex flex-column justify-content-center">
-      <h2 class="feature-heading"><slot name="header"></slot></h2>
+      <h2 class="feature-heading mb-4"><slot name="header"></slot></h2>
       <p class="feature-description"><slot></slot></p>
     </div>
     <div v-if="image" class="col-auto image" :class="{ alternate: alternate }">
@@ -56,12 +56,15 @@ export default class Feature extends Vue {
 
   h2.feature-heading {
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .1em;
     color: $color-white;
   }
 
   p.feature-description {
+    font-weight: 400;
     color: $color-light;
   }
 }

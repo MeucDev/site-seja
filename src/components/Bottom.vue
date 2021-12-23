@@ -6,7 +6,8 @@
         <a href="#"><img src="../assets/images/logo.svg" alt="SEJA" height="40" /></a>
       </div>
       <div class="flex-fill mx-3">
-        &copy; 2021 &middot; <a href="#">Privacy</a>
+        &copy; 2021
+        <!--&middot; <a href="#">Privacy</a>-->
       </div>
       <div class="ml-auto mr-0">
         <a href="#">Voltar ao topo</a>

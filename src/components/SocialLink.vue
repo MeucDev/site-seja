@@ -1,11 +1,11 @@
 <template>
   <div class="social-link m-4">
-    <a :href="link" target="_blank">
-      <span class="bg d-flex justify-content-center" :class="media">
-        <img v-if="media === 'instagram'" src="../assets/images/icon-instagram.svg" />
-        <img v-if="media === 'facebook'" src="../assets/images/icon-facebook.svg" />
-        <img v-if="media === 'youtube'" src="../assets/images/icon-youtube.svg" />
-        <img v-if="media === 'whatsapp'" src="../assets/images/icon-whatsapp.svg" />
+    <a :href="link" target="_blank" :title="media">
+      <span class="bg d-flex justify-content-center" :class="media.toLowerCase()">
+        <img v-if="media === 'Instagram'" src="../assets/images/icon-instagram.svg" />
+        <img v-if="media === 'Facebook'" src="../assets/images/icon-facebook.svg" />
+        <img v-if="media === 'YouTube'" src="../assets/images/icon-youtube.svg" />
+        <img v-if="media === 'WhatsApp'" src="../assets/images/icon-whatsapp.svg" />
       </span>
     </a>
   </div>
