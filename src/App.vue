@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="main">
     <TopMenu />
     <main>
-      <router-view/>
+      <router-view />
     </main>
   </div>
 </template>
@@ -24,12 +24,13 @@ export default class MainApp extends Vue {}
 
 <style lang="scss">
 @import 'bootstrap';
+@import 'assets/scss/colors';
 
-#app {
+#main {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: $color-very-dark;
+  color: $color-white;
 }
 </style>

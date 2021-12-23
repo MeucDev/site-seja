@@ -1,36 +1,68 @@
 <template>
-  <hr class="featurette-divider">
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+  <div class="row feature py-5">
+    <div class="col d-flex flex-column justify-content-center">
+      <h2 class="feature-heading"><slot name="header"></slot></h2>
+      <p class="feature-description"><slot></slot></p>
     </div>
-    <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+    <div v-if="image" class="col-auto image" :class="{ alternate: alternate }">
+      <img :src="image" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component'
+import { Options, Vue } from 'vue-class-component'
 
-export default class Feature extends Vue {}
+@Options({
+  props: {
+    image: {
+      type: String,
+      default: ''
+    },
+    alternate: {
+      type: Boolean,
+      default: false
+    }
+  }
+})
+export default class Feature extends Vue {
+  private alternate?: boolean;
+  private image?: string;
+}
 </script>
 
 <style scoped lang="scss">
-.featurette {
+@import '../assets/scss/colors';
+
+.feature {
   text-align: left;
 
-  hr.featurette-divider {
-    margin: 5rem 0;
+  .image {
+    padding-left: 3rem;
+    max-width: 45%;
+
+    &.alternate {
+      padding-left: 0;
+      padding-right: 3rem;
+      order: -1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      box-shadow: 10px 10px 0 0 $color-green;
+    }
   }
 
-  h2.featurette-heading {
-    margin-top: 7rem;
+  h2.feature-heading {
     font-size: 50px;
     font-weight: 300;
     line-height: 1;
-    letter-spacing: -.05rem;
+    color: $color-white;
+  }
+
+  p.feature-description {
+    color: $color-light;
   }
 }
 </style>

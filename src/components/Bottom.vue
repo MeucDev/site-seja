@@ -1,8 +1,17 @@
 <template>
   <footer class="bottom container">
-    <hr />
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2021 SEJA &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <hr class="mb-5" />
+    <div class="d-flex justify-content-start align-items-center p-5">
+      <div>
+        <a href="#"><img src="../assets/images/logo.svg" alt="SEJA" height="40" /></a>
+      </div>
+      <div class="flex-fill mx-3">
+        &copy; 2021 &middot; <a href="#">Privacy</a>
+      </div>
+      <div class="ml-auto mr-0">
+        <a href="#">Voltar ao topo</a>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -13,11 +22,18 @@ export default class Bottom extends Vue {}
 </script>
 
 <style scoped lang="scss">
-hr {
-  margin: 5rem 0;
-}
+@import '../assets/scss/colors';
 
 .bottom {
   text-align: left;
+  color: $color-light;
+
+  a {
+    color: $color-light;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
 }
 </style>
