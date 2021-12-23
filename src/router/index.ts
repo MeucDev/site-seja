@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Congresso2022 from '../views/Congresso2022.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +9,13 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/home',
+    redirect: '/'
+  },
+  {
+    path: '/congresso-de-jovens',
+    name: 'Congresso de Jovens',
+    component: Congresso2022
   }
 ]
 

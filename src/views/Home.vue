@@ -34,38 +34,41 @@
       <Person :index="5" name="Yuri Schaeffer Herweg" email="yuriherweg@gmail.com" instagram="yurisherweg" image="images/people/yuri-herweg.jpg"></Person>
       <Person :index="6" name="Nilvo Dümes" email="nilvo@riosulense.com.br" instagram="nilvodumes"></Person>
     </div>
-    <Bottom />
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { Options, setup, Vue } from 'vue-class-component'
+import { useMeta } from 'vue-meta'
 import Carousel from '@/components/Carousel.vue'
 import SocialLink from '@/components/SocialLink.vue'
 import Feature from '@/components/Feature.vue'
 import Person from '@/components/Person.vue'
-import Bottom from '@/components/Bottom.vue'
 
 @Options({
   components: {
     Carousel,
     SocialLink,
     Feature,
-    Person,
-    Bottom
+    Person
   }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  meta = setup(() => useMeta({
+    meta: [
+      { name: 'og:type', content: 'website' },
+      { name: 'og:locale', content: 'pt_BR' },
+      { name: 'og:site_name', content: 'SEJA MEUC' },
+      { name: 'og:title', content: 'SEJA - Secretaria de Jovens e Adolescentes da MEUC' }
+    ]
+  }))
+}
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/colors';
 
 .home {
-  padding-top: 86px;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-
   .container h2 {
     width: 100%;
     font-size: 3em;
@@ -87,8 +90,6 @@ export default class Home extends Vue {}
 
 @media screen and (max-width:575px) {
   .home {
-    padding-top: 59px;
-
     .container h2 {
       font-size: 1.5em;
     }

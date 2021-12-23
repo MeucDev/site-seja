@@ -11,7 +11,7 @@
           <div class="carousel-caption text-start text-dark">
             <h2>#SemFiltro</h2>
             <p>42º Congresso de Jovens.</p>
-            <a class="btn btn-lg teal" href="#">Mais Informações</a>
+            <router-link class="btn btn-lg teal" to="congresso-de-jovens">Mais Informações</router-link>
           </div>
         </div>
       </div>
