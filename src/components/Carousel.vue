@@ -26,13 +26,13 @@
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#sejaSlides" data-bs-slide="prev">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
       </svg>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#sejaSlides" data-bs-slide="next">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
       </svg>
       <span class="visually-hidden">Next</span>
@@ -83,11 +83,14 @@ export default class Carousel extends Vue {}
   }
 
   .carousel-item {
+    img {
+      height: auto;
+      width: auto;
+    }
+
     .carousel-caption {
-      img {
-        height: 100%;
-        width: auto;
-      }
+      &.text-dark { text-shadow: 2px 2px 1px $color-white; }
+      &.text-light { text-shadow: 2px 2px 1px $color-dark; }
 
       h2 {
         margin-bottom: 0;
@@ -100,6 +103,7 @@ export default class Carousel extends Vue {}
         color: $color-white;
         transition: all 100ms ease-out;
         box-shadow: 0 0 0 0 $color-dark;
+        text-shadow: none;
 
         &.green { background: $color-green; }
         &.pink { background: $color-pink; }
@@ -111,6 +115,49 @@ export default class Carousel extends Vue {}
           box-shadow: 4px 4px 0 0 $color-dark;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .carousel {
+    .carousel-item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:991px) {
+  .carousel {
+    .carousel-item {
+      .carousel-caption {
+        h2 {
+          font-size: 2em;
+        }
+
+        a.btn {
+          padding: 0.375rem 0.75rem;
+          font-size: .9em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .carousel {
+    .carousel-item {
+      padding: 2em 0 4em;
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .carousel {
+    .carousel-item {
+      padding: 6em 0 8em;
     }
   }
 }

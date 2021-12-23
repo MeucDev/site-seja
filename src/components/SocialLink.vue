@@ -1,5 +1,5 @@
 <template>
-  <div class="social-link m-4">
+  <div class="social-link">
     <a :href="link" target="_blank" :title="media">
       <span class="bg d-flex justify-content-center" :class="media.toLowerCase()">
         <img v-if="media === 'Instagram'" src="../assets/images/icon-instagram.svg" />
@@ -36,6 +36,8 @@ export default class SocialLink extends Vue {
 @import '../assets/scss/colors';
 
 .social-link {
+  margin: 1.5rem;
+
   a {
     display: block;
     overflow: hidden;
@@ -62,6 +64,36 @@ export default class SocialLink extends Vue {
       img {
         width: 50%;
         height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .social-link {
+    a {
+      span.bg {
+        width: 80px;
+        height: 80px;
+      }
+
+      &:hover,
+      &:focus {
+        transform: translateX(-5px) translateY(-5px);
+        box-shadow: 5px 5px 0 0 $color-white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .social-link {
+    margin: 0.5rem;
+
+    a {
+      span.bg {
+        width: 60px;
+        height: 60px;
       }
     }
   }

@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid justify-content-center">
         <a class="navbar-brand" href="#">
-          <img src="../assets/images/logo.svg" alt="SEJA" height="60">
+          <img src="../assets/images/logo.svg" alt="SEJA MEUC">
         </a>
       </div>
     </nav>
@@ -29,6 +29,22 @@ export default class TopMenu extends Vue {}
 
     .navbar-brand {
       margin-right: 0;
+
+      img {
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .top-menu {
+    nav.navbar {
+      .navbar-brand {
+        img {
+          height: 32px;
+        }
+      }
     }
   }
 }

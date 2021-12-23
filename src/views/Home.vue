@@ -26,13 +26,13 @@
     </div>
     <div class="container pb-5 people d-flex flex-wrap justify-content-center">
       <h2 class="text-center my-4">Nossa Equipe</h2>
-      <Person :index="0" name="David Schütz" email="contato@sejameuc.com.br" image="images/people/david-schutz.jpg"></Person>
-      <Person :index="1" name="Monique Schütz" email="moniquecfh@hotmail.com" image="images/people/monique-schutz.jpg"></Person>
-      <Person :index="2" name="Guilherme Guerreiro" email="gui_guerreiro97@hotmail.com" image="images/people/guilherme-guerreiro.jpg"></Person>
-      <Person :index="3" name="Jean Paul Wachholz" email="jean@idealoffice.com.br" image="images/people/jean-wachholz.jpg"></Person>
-      <Person :index="4" name="Timóteo Grigull" email="timoteogrigull@gmail.com" image="images/people/timoteo-grigull.jpg"></Person>
-      <Person :index="5" name="Yuri Schaeffer Herweg" email="yuriherweg@gmail.com" image="images/people/yuri-herweg.jpg"></Person>
-      <Person :index="6" name="Nilvo Dümes" email="nilvo@riosulense.com.br"></Person>
+      <Person :index="0" name="David Schütz" email="contato@sejameuc.com.br" instagram="davidschutzc" image="images/people/david-schutz.jpg"></Person>
+      <Person :index="1" name="Monique Schütz" email="moniquecfh@hotmail.com" instagram="monique_hschutz" image="images/people/monique-schutz.jpg"></Person>
+      <Person :index="2" name="Guilherme Guerreiro" email="gui_guerreiro97@hotmail.com" instagram="_gui_guerreiro_" image="images/people/guilherme-guerreiro.jpg"></Person>
+      <Person :index="3" name="Jean Paul Wachholz" email="jean@idealoffice.com.br" instagram="jeanwachholz" image="images/people/jean-wachholz.jpg"></Person>
+      <Person :index="4" name="Timóteo Grigull" email="timoteogrigull@gmail.com" instagram="timoteogrigull" image="images/people/timoteo-grigull.jpg"></Person>
+      <Person :index="5" name="Yuri Schaeffer Herweg" email="yuriherweg@gmail.com" instagram="yurisherweg" image="images/people/yuri-herweg.jpg"></Person>
+      <Person :index="6" name="Nilvo Dümes" email="nilvo@riosulense.com.br" instagram="nilvodumes"></Person>
     </div>
     <Bottom />
   </div>
@@ -74,6 +74,24 @@ export default class Home extends Vue {}
     text-transform: uppercase;
     letter-spacing: .1em;
     color: $color-white;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .home {
+    .container h2 {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .home {
+    padding-top: 59px;
+
+    .container h2 {
+      font-size: 1.5em;
+    }
   }
 }
 </style>

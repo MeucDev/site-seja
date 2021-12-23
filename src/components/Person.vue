@@ -3,8 +3,9 @@
     <span class="image mb-3" :class="'shadow-' + (index % 3)">
       <img :src="image" :alt="name" />
     </span>
-    <h3 class="name">{{ name }}</h3>
-    <a class="email" :href="'mailto:' + email" target="_blank">{{ email }}</a>
+    <h3 class="name mb-1">{{ name }}</h3>
+    <a class="instagram" v-if="instagram" :href="'https://instagram.com/' + instagram" target="_blank">Instagram</a>
+    <a class="email" :href="'mailto:' + email" target="_blank">E-mail</a>
   </div>
 </template>
 
@@ -27,6 +28,9 @@ import { Options, Vue } from 'vue-class-component'
     },
     email: {
       type: String
+    },
+    instagram: {
+      type: String
     }
   }
 })
@@ -35,6 +39,7 @@ export default class Person extends Vue {
   private name!: string;
   private image?: string;
   private email?: string;
+  private instagram?: string;
 }
 </script>
 
@@ -69,14 +74,32 @@ export default class Person extends Vue {
     margin-bottom: 0;
   }
 
+  a.instagram,
   a.email {
-    font-size: 0.8em;
+    display: block;
+    font-size: 1em;
     color: $color-light;
     text-decoration: none;
 
     &:hover,
     &:focus {
       color: $color-white;
+    }
+  }
+}
+
+@media screen and (max-width:991px) {
+  .person {
+    width: 120px;
+
+    h3.name {
+      font-size: 1em;
+    }
+
+    a.instagram,
+    a.email {
+      padding: 2px 0;
+      font-size: .75em;
     }
   }
 }

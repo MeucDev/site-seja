@@ -9,7 +9,7 @@
         &copy; 2021
         <!--&middot; <a href="#">Privacy</a>-->
       </div>
-      <div class="ml-auto mr-0">
+      <div class="to-the-top ml-auto mr-0">
         <a href="#">Voltar ao topo</a>
       </div>
     </div>
@@ -35,6 +35,18 @@ export default class Bottom extends Vue {}
 
     &:hover {
       color: $color-white;
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .bottom {
+    .d-flex {
+      flex-direction: column;
+    }
+
+    .to-the-top {
+      margin-top: 2em;
     }
   }
 }

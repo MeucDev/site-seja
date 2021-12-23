@@ -1,10 +1,10 @@
 <template>
   <div class="row feature py-5">
-    <div class="col d-flex flex-column justify-content-center">
+    <div class="col-lg d-flex flex-column justify-content-center">
       <h2 class="feature-heading mb-4"><slot name="header"></slot></h2>
       <p class="feature-description"><slot></slot></p>
     </div>
-    <div v-if="image" class="col-auto image" :class="{ alternate: alternate }">
+    <div v-if="image" class="col-lg-auto image" :class="{ alternate: alternate }">
       <img :src="image" />
     </div>
   </div>
@@ -55,7 +55,7 @@ export default class Feature extends Vue {
   }
 
   h2.feature-heading {
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 200;
     line-height: 1;
     text-transform: uppercase;
@@ -66,6 +66,44 @@ export default class Feature extends Vue {
   p.feature-description {
     font-weight: 400;
     color: $color-light;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .feature {
+    text-align: center;
+
+    .image {
+      max-width: 800px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 3em;
+      order: -1;
+
+      &.alternate { padding-right: 0; }
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .feature {
+    h2.feature-heading {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .feature {
+    h2.feature-heading {
+      font-size: 1.5em;
+    }
+
+    .image {
+      img {
+        box-shadow: 0 4px 0 0 $color-green;
+      }
+    }
   }
 }
 </style>
