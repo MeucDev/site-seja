@@ -1,13 +1,7 @@
 <template>
   <div class="home">
     <Carousel />
-    <div class="container py-5 socials d-flex flex-wrap justify-content-center">
-      <h2 class="text-center my-4">Redes Sociais</h2>
-      <SocialLink media="Instagram" link="https://www.instagram.com/sejameuc/"></SocialLink>
-      <SocialLink media="Facebook" link="https://www.facebook.com/sejameuc/"></SocialLink>
-      <SocialLink media="YouTube" link="https://www.youtube.com/sejameuc/"></SocialLink>
-      <SocialLink media="WhatsApp" link="https://wa.me/55047999337491"></SocialLink>
-    </div>
+    <Socials></Socials>
     <div class="container pb-5 features">
       <Feature image="./images/eventos.jpg">
         <template v-slot:header>Eventos</template>
@@ -41,14 +35,14 @@
 import { Options, setup, Vue } from 'vue-class-component'
 import { useMeta } from 'vue-meta'
 import Carousel from '@/components/Carousel.vue'
-import SocialLink from '@/components/SocialLink.vue'
+import Socials from '@/components/Socials.vue'
 import Feature from '@/components/Feature.vue'
 import Person from '@/components/Person.vue'
 
 @Options({
   components: {
     Carousel,
-    SocialLink,
+    Socials,
     Feature,
     Person
   }
@@ -65,34 +59,5 @@ export default class Home extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/scss/colors';
-
-.home {
-  .container h2 {
-    width: 100%;
-    font-size: 3em;
-    font-weight: 200;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: $color-white;
-  }
-}
-
-@media screen and (max-width:767px) {
-  .home {
-    .container h2 {
-      font-size: 2em;
-    }
-  }
-}
-
-@media screen and (max-width:575px) {
-  .home {
-    .container h2 {
-      font-size: 1.5em;
-    }
-  }
-}
+<style lang="scss">
 </style>

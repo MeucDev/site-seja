@@ -6,7 +6,7 @@
     </div>
     <div class="carousel-inner text-center">
       <div class="carousel-item active" style="background-color: #FFFFFF">
-        <img src="../assets/images/congresso-sem-filtro.jpg" alt="Sem Filtro - 42º Congresso de Jovens" />
+        <img src="images/congresso-sem-filtro.jpg" alt="Sem Filtro - 42º Congresso de Jovens" />
         <div class="container">
           <div class="carousel-caption text-start text-dark">
             <h2>#SemFiltro</h2>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="carousel-item" style="background-color: #403F41">
-        <img src="../assets/images/nova-logo.jpg" alt="Nova identidade visual SEJA" />
+        <img src="images/nova-logo.jpg" alt="Nova identidade visual SEJA" />
         <div class="container">
           <div class="carousel-caption text-start text-light">
             <h2>Nova Logo</h2>

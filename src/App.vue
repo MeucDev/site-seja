@@ -50,11 +50,39 @@ export default class MainApp extends Vue {
   -moz-osx-font-smoothing: grayscale;
   background-color: $color-very-dark;
   color: $color-white;
+
+  .container > h2 {
+    width: 100%;
+    font-size: 3em;
+    font-weight: 200;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: $color-white;
+  }
+}
+
+@media screen and (max-width:767px) {
+  #main {
+    .container > h2 {
+      font-size: 2em;
+    }
+  }
 }
 
 @media screen and (max-width:575px) {
   #main {
     padding-top: 59px;
+
+    .container > h2 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width:991px) {
+  .container.sub-sized {
+    max-width: 720px;
   }
 }
 </style>
