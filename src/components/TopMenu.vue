@@ -20,9 +20,12 @@ export default class TopMenu extends Vue {}
 @import '../assets/scss/colors';
 
 .top-menu {
+  position: relative;
+
   nav.navbar {
     background-color: $color-dark;
     color: $color-white;
+    box-shadow: 0 1px 1px -1px $color-green;
 
     .navbar-brand {
       margin-right: 0;

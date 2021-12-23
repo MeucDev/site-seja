@@ -30,6 +30,7 @@ export default class Bottom extends Vue {}
   color: $color-light;
 
   a {
+    text-decoration: none;
     color: $color-light;
 
     &:hover {

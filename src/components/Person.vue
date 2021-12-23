@@ -72,6 +72,12 @@ export default class Person extends Vue {
   a.email {
     font-size: 0.8em;
     color: $color-light;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+    }
   }
 }
 </style>

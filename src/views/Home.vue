@@ -62,7 +62,7 @@ export default class Home extends Vue {}
 @import '../assets/scss/colors';
 
 .home {
-  padding-top: 3rem;
+  padding-top: 86px;
   padding-bottom: 3rem;
   color: #5a5a5a;
 
