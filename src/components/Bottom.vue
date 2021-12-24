@@ -10,7 +10,7 @@
         <!--&middot; <a href="#">Privacy</a>-->
       </div>
       <div class="to-the-top ml-auto mr-0">
-        <a href="#">Voltar ao topo</a>
+        <a href="#">{{ path === '/' ? 'Voltar ao topo' : 'Voltar à página principal' }}</a>
       </div>
     </div>
   </footer>
@@ -19,7 +19,11 @@
 <script lang="ts">
 import { Vue } from 'vue-class-component'
 
-export default class Bottom extends Vue {}
+export default class Bottom extends Vue {
+  get path (): string {
+    return this.$route.path
+  }
+}
 </script>
 
 <style scoped lang="scss">

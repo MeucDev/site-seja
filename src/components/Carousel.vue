@@ -3,6 +3,7 @@
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#sejaSlides" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"><span></span></button>
       <button type="button" data-bs-target="#sejaSlides" data-bs-slide-to="1" aria-label="Slide 2"><span></span></button>
+      <button type="button" data-bs-target="#sejaSlides" data-bs-slide-to="2" aria-label="Slide 3"><span></span></button>
     </div>
     <div class="carousel-inner text-center">
       <div class="carousel-item active" style="background-color: #FFFFFF">
@@ -12,6 +13,16 @@
             <h2>#SemFiltro</h2>
             <p>42º Congresso de Jovens.</p>
             <router-link class="btn btn-lg teal" to="congresso-de-jovens">Mais Informações</router-link>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-color: #FFFFFF">
+        <img src="images/temporada-teen-sem-filtro.jpg" alt="Sem Filtro - Temporada Teen Verão 2022" />
+        <div class="container">
+          <div class="carousel-caption text-start text-dark">
+            <h2>#SemFiltro</h2>
+            <p>Temporada Teen Verão 2022.</p>
+            <router-link class="btn btn-lg pink" to="temporada-teen">Mais Informações</router-link>
           </div>
         </div>
       </div>
@@ -83,6 +94,8 @@ export default class Carousel extends Vue {}
   }
 
   .carousel-item {
+    position: relative;
+
     img {
       height: auto;
       width: auto;

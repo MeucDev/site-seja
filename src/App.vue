@@ -35,7 +35,7 @@ export default class MainApp extends Vue {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,400&display=swap');
 @import 'bootstrap';
 @import 'assets/scss/colors';
 

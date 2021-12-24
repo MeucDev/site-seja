@@ -3,11 +3,13 @@
     <div v-if="image" class="cover-image" :style="{ backgroundColor: imageBackground }">
       <img :src="image" :alt="title + ' - ' + subtitle" />
     </div>
-    <div class="container sub-sized">
-      <div class="titles py-5">
+    <div class="container sub-sized py-5">
+      <div class="back text-end"><router-link to="/">Voltar</router-link></div>
+      <div class="titles">
         <h1>{{ title }}</h1>
         <h2 v-if="subtitle">{{ subtitle }}</h2>
       </div>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -48,6 +50,16 @@ export default class Feature extends Vue {
   .container.sub-sized {
     color: $color-light;
     line-height: 1.2em;
+
+    .back a {
+      color: $color-light;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+      }
+    }
 
     .titles {
       h1 {

@@ -1,6 +1,7 @@
 <template>
   <div class="call-to-action mb-5 p-5 d-flex justify-content-center">
-    <router-link class="btn btn-lg" :to="link">{{ title }}</router-link>
+    <router-link v-if="enabled" class="btn btn-lg enabled" :to="link">{{ title }}</router-link>
+    <span v-if="!enabled" class="btn btn-lg disabled">{{ title }}</span>
   </div>
 </template>
 
@@ -16,6 +17,10 @@ import { Options, Vue } from 'vue-class-component'
     link: {
       type: String,
       required: true
+    },
+    enabled: {
+      type: Boolean,
+      default: true
     }
   }
 })
@@ -33,14 +38,22 @@ export default class CallToAction extends Vue {
   background-image: repeating-linear-gradient(135deg, rgba(193, 212, 49, 0.3) 0, rgba(193, 212, 49, 0.3) 1px, transparent 0, transparent 50%);
 
   .btn {
-    background-color: $color-green;
-    transition: all 100ms ease-out;
-    box-shadow: 0 0 0 0 $color-very-dark;
+    &.enabled {
+      background-color: $color-green;
+      transition: all 100ms ease-out;
+      box-shadow: 0 0 0 0 $color-very-dark;
 
-    &:hover,
-    &:focus {
-      transform: translateX(-4px) translateY(-4px);
-      box-shadow: 4px 4px 0 0 $color-very-dark;
+      &:hover,
+      &:focus {
+        transform: translateX(-4px) translateY(-4px);
+        box-shadow: 4px 4px 0 0 $color-very-dark;
+      }
+    }
+
+    &.disabled {
+      background-color: $color-very-dark;
+      color: $color-green;
+      opacity: 1;
     }
   }
 }

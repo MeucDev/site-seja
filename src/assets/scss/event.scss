@@ -1,0 +1,28 @@
+@import 'colors';
+
+.event {
+  color: $color-light;
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+  p,
+  ol,
+  ul {
+    padding-bottom: 1em;
+  }
+
+  a {
+    color: $color-light;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+    }
+  }
+}

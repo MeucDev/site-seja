@@ -1,8 +1,11 @@
 <template>
-  <div class="congresso-2022">
-    <TitleCover image="images/congresso-sem-filtro.jpg" imageBackground="#ffffff" title="#SemFiltro" subtitle="42º Congresso de Jovens"></TitleCover>
+  <div class="congresso-2022 event">
+    <TitleCover image="images/congresso-sem-filtro.jpg" imageBackground="#ffffff" title="#SemFiltro" subtitle="42º Congresso de Jovens">
+      <h3>São Bento do Sul</h3>
+      <h3>26 de Fevereiro a 01 de Março</h3>
+    </TitleCover>
     <div class="container sub-sized py-2">
-      <CallToAction title="Inscreva-se!" link="#"></CallToAction>
+      <CallToAction title="Inscrições em breve" link="#" :enabled="false"></CallToAction>
       <p class="mt-5">
         Mais informações em breve!<br/><br/>
         Prepare-se para o melhor Congresso de todos os tempos!
@@ -26,7 +29,7 @@ import Socials from '@/components/Socials.vue'
     Socials
   }
 })
-export default class Home extends Vue {
+export default class Congresso2022 extends Vue {
   meta = setup(() => useMeta({
     title: '#SemFiltro | 42º Congresso de Jovens',
     meta: [
@@ -38,3 +41,7 @@ export default class Home extends Vue {
   }))
 }
 </script>
+
+<style lang="scss" scoped>
+@import '../assets/scss/event';
+</style>

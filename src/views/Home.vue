@@ -26,7 +26,7 @@
       <Person :index="3" name="Jean Paul Wachholz" email="jean@idealoffice.com.br" instagram="jeanwachholz" image="images/people/jean-wachholz.jpg"></Person>
       <Person :index="4" name="Timóteo Grigull" email="timoteogrigull@gmail.com" instagram="timoteogrigull" image="images/people/timoteo-grigull.jpg"></Person>
       <Person :index="5" name="Yuri Schaeffer Herweg" email="yuriherweg@gmail.com" instagram="yurisherweg" image="images/people/yuri-herweg.jpg"></Person>
-      <Person :index="6" name="Nilvo Dümes" email="nilvo@riosulense.com.br" instagram="nilvodumes"></Person>
+      <Person :index="6" name="Nilvo Dümes" email="nilvo@riosulense.com.br"></Person>
     </div>
   </div>
 </template>
