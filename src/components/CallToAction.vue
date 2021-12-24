@@ -1,6 +1,6 @@
 <template>
   <div class="call-to-action mb-5 p-5 d-flex justify-content-center">
-    <router-link v-if="enabled" class="btn btn-lg enabled" :to="link">{{ title }}</router-link>
+    <a v-if="enabled" class="btn btn-lg enabled" :href="link" target="_blank">{{ title }}</a>
     <span v-if="!enabled" class="btn btn-lg disabled">{{ title }}</span>
   </div>
 </template>
