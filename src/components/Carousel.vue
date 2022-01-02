@@ -7,31 +7,49 @@
     </div>
     <div class="carousel-inner text-center">
       <div class="carousel-item active" style="background-color: #FFFFFF">
-        <img src="images/congresso-sem-filtro.jpg" alt="Sem Filtro - 42º Congresso de Jovens" />
         <div class="container">
-          <div class="carousel-caption text-start text-dark">
-            <h2>#SemFiltro</h2>
-            <p>42º Congresso de Jovens.</p>
-            <router-link class="btn btn-lg teal" to="congresso-de-jovens">Mais Informações</router-link>
+          <div class="row">
+            <div class="col-lg col-12 d-flex flex-column justify-content-end">
+              <div class="captions text-start text-dark mt-auto">
+                <h2>#SemFiltro</h2>
+                <p>42º Congresso de Jovens.</p>
+                <router-link class="btn btn-lg teal" to="congresso-de-jovens">Mais Informações</router-link>
+              </div>
+            </div>
+            <div class="col-lg-auto col-12">
+              <img src="images/congresso-sem-filtro.jpg" alt="Sem Filtro - 42º Congresso de Jovens" />
+            </div>
           </div>
         </div>
       </div>
       <div class="carousel-item" style="background-color: #FFFFFF">
-        <img src="images/temporada-teen-sem-filtro.jpg" alt="Sem Filtro - Temporada Teen Verão 2022" />
         <div class="container">
-          <div class="carousel-caption text-start text-dark">
-            <h2>#SemFiltro</h2>
-            <p>Temporada Teen Verão 2022.</p>
-            <router-link class="btn btn-lg pink" to="temporada-teen">Mais Informações</router-link>
+          <div class="row">
+            <div class="col-lg col-12 d-flex flex-column justify-content-end">
+              <div class="captions text-start text-dark mt-auto">
+                <h2>#SemFiltro</h2>
+                <p>Temporada Teen Verão 2022.</p>
+                <router-link class="btn btn-lg pink" to="temporada-teen">Mais Informações</router-link>
+              </div>
+            </div>
+            <div class="col-lg-auto col-12">
+              <img src="images/temporada-teen-sem-filtro.jpg" alt="Sem Filtro - Temporada Teen Verão 2022" />
+            </div>
           </div>
         </div>
       </div>
       <div class="carousel-item" style="background-color: #403F41">
-        <img src="images/nova-logo.jpg" alt="Nova identidade visual SEJA" />
         <div class="container">
-          <div class="carousel-caption text-start text-light">
-            <h2>Nova Logo</h2>
-            <p>A SEJA agora está de cara nova.</p>
+          <div class="row">
+            <div class="col-lg col-12 d-flex flex-column justify-content-end">
+              <div class="captions text-start text-white mt-auto">
+                <h2>Nova Logo</h2>
+                <p>A SEJA agora está de cara nova.</p>
+              </div>
+            </div>
+            <div class="col-lg-auto col-12">
+              <img src="images/nova-logo.jpg" alt="Nova identidade visual SEJA" />
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +119,10 @@ export default class Carousel extends Vue {}
       width: auto;
     }
 
-    .carousel-caption {
+    .captions {
+      padding-left: 3em;
+      padding-bottom: 4em;
+
       &.text-dark { text-shadow: 2px 2px 1px $color-white; }
       &.text-light { text-shadow: 2px 2px 1px $color-dark; }
 
@@ -132,20 +153,12 @@ export default class Carousel extends Vue {}
   }
 }
 
-@media screen and (max-width:1000px) {
-  .carousel {
-    .carousel-item {
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
 @media screen and (max-width:991px) {
   .carousel {
     .carousel-item {
-      .carousel-caption {
+      .captions {
+        min-height: 200px;
+
         h2 {
           font-size: 2em;
         }
@@ -155,6 +168,16 @@ export default class Carousel extends Vue {}
           font-size: .9em;
         }
       }
+
+      .col-lg-auto {
+        order: -1;
+        text-align: center;
+
+        img {
+          width: auto;
+          max-width: 100%;
+        }
+      }
     }
   }
 }
@@ -162,15 +185,12 @@ export default class Carousel extends Vue {}
 @media screen and (max-width:767px) {
   .carousel {
     .carousel-item {
-      padding: 2em 0 4em;
-    }
-  }
-}
+      padding: 1em 0;
 
-@media screen and (max-width:575px) {
-  .carousel {
-    .carousel-item {
-      padding: 6em 0 8em;
+      .captions {
+        padding-bottom: 3em;
+        padding-top: 1em;
+      }
     }
   }
 }

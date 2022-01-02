@@ -84,17 +84,6 @@ export default class Feature extends Vue {
   }
 }
 
-@media screen and (max-width:1000px) {
-  .title-cover {
-    .cover-image {
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-}
-
 @media screen and (max-width:767px) {
   .title-cover {
     .container.sub-sized {
@@ -110,7 +99,7 @@ export default class Feature extends Vue {
     }
 
     .cover-image {
-      padding: 2em 0 4em;
+      padding: 1em 0;
     }
   }
 }
@@ -118,7 +107,18 @@ export default class Feature extends Vue {
 @media screen and (max-width:575px) {
   .title-cover {
     .cover-image {
-      padding: 6em 0 8em;
+      padding: 2em 0;
+    }
+  }
+}
+
+@media screen and (max-width:500px) {
+  .title-cover {
+    .cover-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

@@ -13,6 +13,11 @@
         <a href="#">{{ path === '/' ? 'Voltar ao topo' : 'Voltar à página principal' }}</a>
       </div>
     </div>
+    <a href="#" class="rolling-home position-fixed d-block d-md-block d-lg-none">
+      <span class="round d-flex justify-content-center text-center">
+        <img class="m-auto" src="../assets/images/icon-home.svg" alt="Início" />
+      </span>
+    </a>
   </footer>
 </template>
 
@@ -39,6 +44,24 @@ export default class Bottom extends Vue {
 
     &:hover {
       color: $color-white;
+    }
+  }
+
+  .rolling-home {
+    bottom: 2em;
+    right: 2em;
+    background-color: $color-green;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.6);
+
+    span {
+      width: 4em;
+      height: 4em;
+
+      img {
+        width: 40%;
+        height: auto;
+      }
     }
   }
 }

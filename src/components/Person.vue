@@ -59,9 +59,9 @@ export default class Person extends Vue {
     background: $color-dark;
     border-radius: 50%;
 
-    &.shadow-0 { box-shadow: 6px 6px 0 2px $color-green; }
-    &.shadow-1 { box-shadow: 6px 6px 0 2px $color-pink; }
-    &.shadow-2 { box-shadow: 6px 6px 0 2px $color-teal; }
+    &.shadow-0 { box-shadow: 3px 3px 0 1px $color-green; }
+    &.shadow-1 { box-shadow: 3px 3px 0 1px $color-pink; }
+    &.shadow-2 { box-shadow: 3px 3px 0 1px $color-teal; }
 
     img {
       width: 100%;
